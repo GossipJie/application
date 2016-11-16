@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="users">
+<head>
+  <meta charset="utf-8">
+  <title>华中师范大学招生报名考试管理系统</title>
+  <meta name="description" content="华中师范大学招生考试报名系统">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="../common/vender/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../common/vender/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../common/vender/assets/css/style.css">
+<!-- AngularJS -->
+<script src="../common/scripts/vendor/angular-1.5.8/angular.min.js"></script>
+<script
+	src="../common/scripts/vendor/angular-1.5.8/angular-resource.min.js"></script>
+<script
+	src="../common/scripts/vendor/angular-1.5.8/angular-route.min.js"></script>
+
+<!-- Music JS -->
+<script src="scripts/usersApp.js"></script>
+<script src="scripts/controllers/controllers.js"></script>
+<script src="scripts/routes/routes.js"></script>
+
+<link rel="stylesheet"
+	href="styles/users.css" />
+  <!--[if lt IE 9]>
+    <script src="../common/vender/assets/js/ie/respond.min.js"></script>
+    <script src="../common/vender/assets/js/ie/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar bg bg-black">
+    <a href="docs.html" class="btn btn-link pull-right"><i class="icon-question icon-xlarge text-default"></i>帮助</a>
+    <a class="navbar-brand" href="#">CCNU</a>
+  </header>
+  <!-- / header -->
+  <section id="content">
+    <div class="main padder">
+		<div ng-view></div>
+	
+	</div>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>版权所有：华中师范大学招生办公室</small><br>
+        <small>技术支持：武汉深蓝睿智资讯有限公司</small>
+      </p>
+    </div>
+  </footer>
+  <!-- / footer -->
+	<script src="../common/vender/assets/js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../common/vender/assets/js/bootstrap.js"></script>
+  <!-- app -->
+  <script src="../common/vender/assets/js/app.js"></script>
+  <script src="../common/vender/assets/js/app.plugin.js"></script>
+  <script src="../common/vender/assets/js/app.data.js"></script>
+</body>
+</html>

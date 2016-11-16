@@ -1,0 +1,250 @@
+<section class="panel">
+	<div class="wizard clearfix m-b">
+		<ul class="steps">
+			<li data-target="#step1" class="active"><span
+				class="badge badge-info">1</span>上传照片</li>
+			<li data-target="#step2"><span class="badge">2</span>填写报名信息</li>
+			<li data-target="#step3"><span class="badge">3</span>填写报考信息</li>
+			<li data-target="#step4"><span class="badge">4</span>缴纳初试费</li>
+		</ul>
+		<div class="actions">
+			<button type="button" class="btn btn-white btn-mini btn-prev"
+				disabled="disabled">
+				<i class="icon-chevron-left"></i>上一步
+			</button>
+			<button type="button" class="btn btn-white btn-mini btn-next"
+				data-last="Finish">
+				下一步<i class="icon-chevron-right"></i>
+			</button>
+		</div>
+	</div>
+
+	<div class="step-content">
+		<div class="step-pane active" id="step1">
+			<h3 class="lighter block green">这里上传照片</h3>
+			<form class="form-horizontal" id="sample-form">
+				<div class="alert alert-info">
+					<i class="icon-hand-right"></i> 请选择你要上传的照片上传，分辨率为400*300，大小不超过400K.
+				</div>
+				<div id="dropzone" data-ng-init="initFile()">
+					<form action="//dummy.html" class="dropzone">
+						<div class="fallback">
+							<input name="file" type="file" multiple="" />
+						</div>
+					</form>
+				</div>
+				
+			</form>
+		</div>
+		<div class="step-pane" id="step2">
+			<h3 class="lighter block green">这里填写报名信息</h3>
+
+			<form class="form-horizontal" method="get" data-validate="parsley">
+				
+				<div class="form-group">
+					<label class="col-lg-3 control-label">考生姓名</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生真实姓名"
+							class="form-control" data-required="true"
+							data-type="email">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-lg-3 control-label">性别</label>
+					<div class="col-lg-2">
+						<select name="sex" class="form-control">
+							<option value="">&nbsp;</option>
+							<option value="AL">男</option>
+							<option value="AK">女</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label class="col-lg-3 control-label">身份证号码</label>
+					<div class="col-lg-4">
+						<input type="password" name="idNumber" placeholder="这里输入身份证号码"
+							class="form-control">
+				
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">考生报名号</label>
+					<div class="col-lg-4">
+						<input type="text" name="examNumber" placeholder="这里输入14位考生报名号"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputError4"
+						class="col-xs-12 col-sm-3 control-label no-padding-right">生源地</label>
+
+					<div class="col-lg-2">
+						<input readonly="" type="text" class="form-control"
+							id="form-input-readonly" value="河南省" />
+
+					</div>
+
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">毕业中学</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生学籍所在的中学名称"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">联系电话</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生的联系方式"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">备用电话</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生的备用联系方式"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">父亲姓名</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生父亲的真实姓名"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">父亲工作单位</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生父亲的工作单位"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">父亲电话</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生父亲的联系电话"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">母亲姓名</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生母亲的真实姓名"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">母亲工作单位</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生母亲的联系电话"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">母亲电话</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生母亲的联系电话"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">通信地址</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生通信地址，用于邮寄录取通知书"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">邮政编码</label>
+					<div class="col-lg-4">
+						<input type="text" name="username" placeholder="这里输入考生通信地址的六位邮政编码"
+							data-required="true" class="form-control">
+					</div>
+				</div>
+				
+				
+			</form>
+			</div>
+			<div class="step-pane" id="step3">
+				<h3 class="lighter block green">这里填写报考信息</h3>
+				<form class="form-horizontal" id="sample-form">
+					<div class="form-group ">
+						<label for="inputWarning"
+							class="col-xs-12 col-sm-3 control-label no-padding-right">科目</label>
+
+					<div class="row col-xs-12 col-sm-5">
+						<p>
+						 <div class="radio">
+					
+						<div class="checkbox">
+							<label class="checkbox-custom"> <input type="checkbox"
+								name="checkboxA" checked="checked"> <i
+								class="icon-unchecked"></i> 声乐
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox-custom"> <input type="checkbox"
+								name="checkboxB" id="2"> <i class="icon-unchecked"></i>
+								钢琴
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox-custom"> <input type="checkbox"
+								name="checkboxB" id="2"> <i class="icon-unchecked"></i>
+								 器乐
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox-custom"> <input type="checkbox"
+								name="checkboxB" id="2"> <i class="icon-unchecked"></i>
+								舞蹈
+							</label>
+						</div>
+						</div>
+					</p>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline">
+							这里选择报考科目（舞蹈不可与声乐、钢琴、器乐同时报考）</div>
+					</div>
+
+				<div class="form-group">
+					<label class="col-lg-3 control-label">声乐曲目</label>
+					<div class="col-lg-4">
+						<input type="text" name="email" placeholder=""
+							class="bg-focus form-control" data-required="true"
+							data-type="email">
+					</div>
+				</div>
+				
+			</form>
+				
+			</div>
+			
+			<div class="step-pane" id="step4">
+			<h3 class="lighter block green">请在这里缴费</h3>
+			<form class="form-horizontal" id="sample-form">
+				<div class="form-group ">
+					<label for="inputError"
+						class="col-xs-5 col-sm-3 col-md-3 control-label no-padding-right">缴费金额</label>
+					<div class="col-sm-1">
+
+						<p class="cost">453</p>
+					</div>
+					<!-- <button class="btn btn-danger">马上缴费</button> -->
+
+				</div>
+				<div class="line line-dashed m-t-large"></div>
+
+				<div class="form-group">
+					<div class="p-save">
+						<button type="submit" class="btn btn-default btn-primary">马上缴费</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html ng-app="music">
+<head>
+  <meta charset="utf-8">
+  <title>Mobile first web app theme | first</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="../common/vender/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../common/vender/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../common/vender/assets/css/plugin.css">
+  <link rel="stylesheet" href="../common/vender/assets/css/style.css">
+
+		<!-- AngularJS -->
+		<script src="../common/scripts/vendor/angular-1.5.8/angular.min.js"></script>
+		<script src="../common/scripts/vendor/angular-1.5.8/angular-resource.min.js"></script>
+		<script src="../common/scripts/vendor/angular-1.5.8/angular-route.min.js"></script>
+		<!-- Music JS -->
+		<script src="scripts/directives/directives.js"></script>
+		<script src="../users/scripts/directives/usersDirectives.js"></script>
+		<script src="scripts/musicApp.js"></script>
+		<script src="scripts/controllers/controllers.js"></script>
+		<script src="../users/scripts/controllers/usersControllers.js"></script>
+		<script src="scripts/routes/routes.js"></script>
+<!--[if lt IE 9]>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="styles/step.css" />
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar">    
+    <ul class="nav navbar-nav navbar-avatar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">            
+          <span class="hidden-sm-only">张三</span>
+          <span class="thumb-small avatar inline"><img src="../common/vender/assets/images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
+          <b class="caret hidden-sm-only"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#zbsys-users-password" data-toggle="modal">修改密码</a></li>
+          <li><a href="docs.html">帮助</a></li>
+          <li><a href="signin.html">退出</a></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <a class="navbar-brand" href="#">CCNU</a>
+    <button type="button" class="btn btn-link pull-left nav-toggle hidden-lg" data-toggle="class:show" data-target="#nav">
+      <i class="icon-reorder icon-xlarge text-default"></i>
+    </button>
+    <ul class="nav navbar-nav hidden-sm">
+     
+      
+      <li class="dropdown shift" data-toggle="shift:appendTo" data-target=".nav-primary .nav">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-xlarge visible-sm visible-sm-inline"></i>主题设置 <b class="caret hidden-sm-only"></b></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#" data-toggle="class:navbar-fixed" data-target='body'>
+              <span class="text-active">自动</span>
+              <span class="text">固定</span>
+            </a>
+          </li>
+         <!--  <li class="visible-lg">
+            <a href="#" data-toggle="class:nav-vertical" data-target="#nav"> 
+              <span class="text-active">vertical</span>
+              <span class="text">horizontal</span>
+            </a>
+          </li> -->
+          
+          <li>
+            <a href="#" data-toggle="class:bg bg-black" data-target='.navbar'>
+              <span class="text-active">白</span>
+              <span class="text">黑</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-toggle="class:bg-light" data-target='#nav'> 
+              <span class="text-active">暗</span>
+              <span class="text">亮</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+   
+  </header>
+  <!-- / header -->
+  <!-- nav -->
+  <nav id="nav" class="nav-primary visible-lg nav-vertical">
+    <ul class="nav" data-spy="affix" data-offset-top="50">
+      <li><a href="index.html"><i class="icon-dashboard icon-xlarge"></i>考生状态</a></li>
+      <li class="active"><a href="#/apply?step=1"><i class="icon-time icon-xlarge"></i>报考初试</a></li>
+      <li class="dropdown-submenu">
+        <a href="#/details"><i class="icon-th icon-xlarge"></i>报名信息</a>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="#/apply?step=3"><i class="icon-list icon-xlarge"></i>报考信息</a>
+      </li>
+      <li><a href="#/pay"><i class="icon-edit icon-xlarge"></i>缴费信息</a></li>
+      <li><a href="#/card"><i class="icon-signal icon-xlarge"></i>准考证信息</a></li>
+      <li class="dropdown-submenu">
+        <a href="#/scores"><i class="icon-link icon-xlarge"></i>初试成绩</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- / nav -->
+  <section id="content" class="content-sidebar">    
+    <!-- .main -->
+    <section class="main" ng-view>
+    
+	</section>		
+	<!-- /.main -->
+	
+  </section>
+	<!-- 修改密码  begin-->
+	<!-- <zbsys-users-directive></zbsys-users-directive> -->
+	<!-- 修改密码  end-->
+
+	<!-- 个人信息  begin-->
+
+	<!-- 个人信息  end-->
+	<!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>版权所有：华中师范大学招生办公室</small><br>
+        <small>技术支持：武汉深蓝睿智资讯有限公司</small>
+      </p>
+    </div>
+  </footer>
+  <!-- / footer -->
+	<script src="../common/vender/assets/js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../common/vender/assets/js/bootstrap.js"></script>
+
+  <script src="../common/vender/assets/js/fuelux/fuelux.js"></script>
+  <script src="../common/vender/assets/js/datepicker/bootstrap-datepicker.js"></script>
+  <!-- fullcalendar -->
+  <script src="../common/vender/assets/js/fullcalendar/jquery-ui-1.10.2.custom.min.js"></script>
+  <script src="../common/vender/assets/js/fullcalendar/jquery.ui.touch-punch.min.js"></script>
+  <script src="../common/vender/assets/js/fullcalendar/fullcalendar.min.js"></script>  
+  <!-- Sparkline Chart -->
+  <script src="../common/vender/assets/js/charts/sparkline/jquery.sparkline.min.js"></script>
+  <!-- Easy Pie Chart -->
+  <script src="../common/vender/assets/js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+
+  <!-- app -->
+  <script src="../common/vender/assets/js/app.js"></script>
+  <script src="../common/vender/assets/js/app.plugin.js"></script>
+  <script src="../common/vender/assets/js/app.data.js"></script>
+</body>
+</html>
